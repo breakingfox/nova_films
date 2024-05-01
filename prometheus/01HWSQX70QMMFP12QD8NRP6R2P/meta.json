@@ -1,0 +1,17 @@
+{
+	"ulid": "01HWSQX70QMMFP12QD8NRP6R2P",
+	"minTime": 1714500000678,
+	"maxTime": 1714507200000,
+	"stats": {
+		"numSamples": 302575,
+		"numSeries": 245,
+		"numChunks": 2696
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HWSQX70QMMFP12QD8NRP6R2P"
+		]
+	},
+	"version": 1
+}
