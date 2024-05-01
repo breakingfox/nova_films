@@ -1,0 +1,41 @@
+/* category.component.css */
+.category {
+  margin-top: 20px;
+}
+
+.category h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movie-list {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc; /* Grey line */
+}
+
+.movie-card {
+  margin-right: 20px;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.movie-list::-webkit-scrollbar {
+  width: 16px;
+}
+
+.movie-list::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 100px;
+}
+.movie-list {
+  scrollbar-color: #d4aa70 #e4e4e4;
+}

@@ -1,0 +1,14 @@
+/* Add these styles to your component's CSS file */
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh; /* Set height to 100% of the viewport height */
+  text-align: center; /* Center text horizontally */
+}
+
+video {
+  margin-top: 20px; /* Add some spacing below the text */
+}

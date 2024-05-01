@@ -1,0 +1,65 @@
+<div class="edit-movie-container">
+  <h2>Edit Movie</h2>
+  <form (ngSubmit)="updateMovie()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="movie.name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="movie.description" name="description" required></textarea>
+    </div>
+
+    <!--    <div class="form-group">-->
+    <!--      <label for="thumbnail">Thumbnail URL:</label>-->
+    <!--      <input type="text" id="thumbnail" [(ngModel)]="movie.thumbnail" name="thumbnail" required>-->
+    <!--    </div>-->
+
+    <!--    <div class="form-group">-->
+    <!--      <label for="videoUrl">Video URL:</label>-->
+    <!--      <input type="text" id="videoUrl" [(ngModel)]="movie.videoUrl" name="videoUrl" required>-->
+    <!--    </div>-->
+
+    <div class="form-group">
+      <label for="category">Select Category:</label>
+      <select id="category" name="category"
+              [(ngModel)]="movie.categoryId">
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="prevImg">Previous thumbnail:</label>
+      <br/>
+      <img id="prevImg" [src]="imageUrl" alt="{{ movie.name }}" width="250px" height="150px"/>
+    </div>
+    <div class="col-6">
+      <div class="text-wrapper centered">
+        <a (click)="selectFile.click()"
+           class="browse-button">Select new thumbnail</a>
+      </div>
+      <input multiple
+             type="file"
+             #selectFile
+             value="select"
+             (change)="onFileSelected($event)">
+    </div>
+<!--    <br>-->
+<!--    <br>-->
+<!--    <button type="submit">Save</button>-->
+    <app-pick-actors/>
+    <h3>Actors starring in movie:</h3>
+    <ul>
+      <li *ngFor="let actor of pickActorsService.pickedActors">
+        {{ actor.name }}
+        <button (click)="remove(actor)">Remove</button>
+      </li>
+    </ul>
+
+
+
+    <button (click)="save()">Update Movie</button>
+  </form>
+</div>

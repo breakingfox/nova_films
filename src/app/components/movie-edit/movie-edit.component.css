@@ -1,0 +1,23 @@
+.edit-movie-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; /* Adjust as needed */
+  margin: auto; /* Center the form horizontally */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/*input,*/
+/*textarea,*/
+/*button {*/
+/*  width: 100%;*/
+/*  padding: 8px;*/
+/*  margin-top: 5px;*/
+/*  box-sizing: border-box;*/
+/*}*/

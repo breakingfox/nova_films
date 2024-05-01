@@ -1,0 +1,50 @@
+<div class="edit-movie-container">
+  <h2>Add new Movie</h2>
+  <form (ngSubmit)="saveMovie()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="movie.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="movie.description" name="description"></textarea>
+    </div>
+
+    <!--    <div class="form-group">-->
+    <!--      <label for="videoUrl">Video URL:</label>-->
+    <!--      <input type="text" id="videoUrl" [(ngModel)]="movie.videoUrl" name="videoUrl">-->
+    <!--    </div>-->
+
+    <div class="form-group">
+      <label for="category">Select Category:</label>
+      <select id="category" name="category" [(ngModel)]="selectedCategory">
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-6">
+      <div>
+        <!--        <div class="dropzone"-->
+        <!--             appDrag-->
+        <!--             (file)="fileDropped($event)">-->
+        <div class="text-wrapper centered">
+          <a (click)="selectFile.click()"
+             class="browse-button">Browse a file</a>
+        </div>
+        <!--        </div>-->
+        <br>
+        <input multiple
+               type="file"
+               #selectFile
+               value="select"
+               (change)="onFileSelected($event)">
+      </div>
+      <br>
+      <br>
+      <button type="submit">Add Movie</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<!-- category.component.html -->
+<div class="category">
+  <h2>{{ category.name }}</h2>
+  <div class="movie-list">
+    <app-movie-card
+      *ngFor="let movie of categoryMovies"
+      [movie]="movie"
+    ></app-movie-card>
+  </div>
+</div>

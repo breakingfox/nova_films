@@ -1,0 +1,10 @@
+<!-- pick-movies.component.html -->
+<div>
+  <h2>Pick movies to add</h2>
+  <ul>
+    <li *ngFor="let movie of pickUncategorizedMoviesService.unpickedMovies">
+      {{ movie.name }}
+      <button (click)="pickMovie(movie)">Pick</button>
+    </li>
+  </ul>
+</div>

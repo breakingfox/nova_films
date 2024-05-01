@@ -1,0 +1,9 @@
+<div>
+  <h2>Pick actors to add</h2>
+  <ul>
+    <li *ngFor="let actor of pickActorsService.unpickedActors">
+      {{ actor.name }}
+      <button (click)="pickActor(actor)">Pick</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,52 @@
+<div>
+  <h2>Add stuff</h2>
+  <ul>
+    <nav>
+      <li><a routerLink="/movie/add">Add movie</a></li>
+      <li><a routerLink="/actor/add">Add actor</a></li>
+      <li><a routerLink="/category/add">Add Category</a></li>
+    </nav>
+  </ul>
+  <div class="admin-columns">
+    <div>
+      <h3>Categories</h3>
+      <ul>
+        <li *ngFor="let entity of categories">
+          {{ entity.name }}
+          <button (click)="editCategory(entity.id)">Edit</button>
+          <button (click)="deleteCategory(entity.id)">Delete</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Movies</h3>
+      <ul>
+        <li *ngFor="let entity of movies">
+          {{ entity.name }}
+          <button (click)="editMovie(entity.id)">Edit</button>
+          <button (click)="deleteMovie(entity.id)">Delete</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Actors</h3>
+      <ul>
+        <li *ngFor="let entity of actors">
+          {{ entity.name }}
+          <button (click)="editActor(entity.id)">Edit</button>
+          <button (click)="deleteActor(entity.id)">Delete</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Users</h3>
+      <ul>
+        <li *ngFor="let entity of users">
+          {{ entity.name }}
+          <button (click)="editUser(entity.id)">Edit</button>
+          <button (click)="deleteUser(entity.id)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

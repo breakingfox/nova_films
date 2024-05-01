@@ -1,0 +1,40 @@
+/* Add this to your global styles.css or component's style file */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 100vh;
+  margin-top: 10vh;
+  /*background-color: #f5f5f5; !* Set your desired background color *!*/
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5); /* Set the desired background color and transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a box shadow for a lifted effect */
+}
+
+.card {
+  width: 100%;
+  max-width: 250px; /* Set the maximum width of your registration component */
+}
+
+/* Additional styling for form elements */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+/* Adjustments for smaller screens */
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+}

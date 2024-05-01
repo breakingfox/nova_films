@@ -1,0 +1,17 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-root {
+  height: 100%;
+}
+
+.content {
+  min-height: 1800px;
+  box-sizing: border-box;
+  background-color: #5a5a5a; /* Greyish background color */
+  /*padding: 20px; !* Add padding for better visual appeal *!*/
+}

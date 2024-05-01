@@ -1,0 +1,17 @@
+<!-- header.component.html -->
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+<!--      <li><a routerLink="/movie/add">Add movie</a></li>-->
+<!--      <li><a routerLink="/movieList">All movies</a></li>-->
+<!--      <li><a routerLink="/watched">Watched List</a></li>-->
+    </ul>
+  </nav>
+  <div *ngIf="isLoggedIn" class="account-button">
+    <button (click)="openAccountEdit()">Account</button>
+  </div>
+  <div *ngIf="isAdmin" class="account-button">
+    <button (click)="openAdminPanel()">Admin panel</button>
+  </div>
+</header>

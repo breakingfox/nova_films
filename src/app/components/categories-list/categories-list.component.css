@@ -1,0 +1,19 @@
+/* categories-list.component.css */
+.categories-list {
+  margin-top: 20px;
+}
+
+.categories-list ul {
+  list-style: none;
+  display: flex;
+}
+
+.categories-list li {
+  margin-right: 20px;
+}
+
+.categories-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+<!-- add-category.component.html -->
+<div>
+  <h2>Add Category</h2>
+  <label for="categoryName">Category Name:</label>
+  <input type="text" id="categoryName" [(ngModel)]="category.name"/>
+  <app-pick-movies></app-pick-movies>
+  <h3>Selected Movies:</h3>
+  <ul>
+    <li *ngFor="let movie of pickMoviesService.pickedMovies">
+      {{ movie.name }}
+      <button (click)="remove(movie)">Remove</button>
+    </li>
+  </ul>
+  <button (click)="saveCategory()">Save</button>
+</div>

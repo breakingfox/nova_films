@@ -1,0 +1,8 @@
+<!-- movie-list.component.html -->
+<div class="movie-list">
+  <div class="horizontal-scroll">
+    <div class="movie-card" *ngFor="let movie of movies">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
+  </div>
+</div>

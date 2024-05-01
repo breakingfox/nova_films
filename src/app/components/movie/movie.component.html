@@ -1,0 +1,16 @@
+<div>
+  <button *ngIf="isAdmin" routerLink="/movies/{{ movie.id }}/edit">Edit</button>
+  <h2>{{ movie.name }}</h2>
+  <p>{{ movie.description }}</p>
+  <img [src]="imageUrl" alt="{{ movie.name }}"  width="250px" height="150px"/>
+  <video width="640" height="360" controls>
+    <source [src]="movie.videoUrl" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="form-group">
+    <label>Actors:</label>
+    <ul>
+      <li *ngFor="let actor of actors">{{ actor.name }}</li>
+    </ul>
+  </div>
+</div>

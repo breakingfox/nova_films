@@ -1,0 +1,64 @@
+/* header.component.css */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none; /* Remove underlines from links */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Center the items vertically */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+/* Center the links in the middle */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center; /* Center the items vertically */
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.account-button button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Move the account button to the right */
+.account-button {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* Optionally, add some margin between the search bar and account button */
+.search-bar {
+  margin-right: 20px;
+}

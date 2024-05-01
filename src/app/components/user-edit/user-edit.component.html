@@ -1,0 +1,19 @@
+
+<h2>Account info</h2>
+<label for="username">
+  <span>Username:</span>
+  <input type="text" id="username" readonly [(ngModel)]="user.username"/>
+</label>
+<label for="name">
+  <span>Name:</span>
+  <input type="text" id="name" [(ngModel)]="user.name"/>
+</label>
+<label for="role" *ngIf="isAdmin">
+  <span>Role:</span>
+  <select id="role" name="role" [(ngModel)]="user.role">
+    <option *ngFor="let role of roles" [value]="role">
+      {{ role }}
+    </option>
+  </select>
+</label>
+<button (click)="saveUser()">Save</button>
